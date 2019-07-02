@@ -15,7 +15,7 @@ npm install
 
 ```
 react转小程序核心思想：
-  利用react的自定义render adapte(react-reconciler)，将react的运行时引入小程序，监听虚拟dom的update和commit的阶段回调，在这些阶段里取执行小程序的setData方法。
+  利用react的自定义render adapter(react-reconciler)，将react的运行时引入小程序，监听虚拟dom的update和commit的阶段回调，在这些阶段里取执行小程序的setData方法。
   前置工作：
     1.将reactcomponet的render里的jsx转成小程序的静态template
     2.将react的class类转成createClass （便于生成小程序的config对象
