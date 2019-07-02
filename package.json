@@ -1,0 +1,13 @@
+{
+  "name": "react2miniapp",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-reconciler": "^0.20.4"
+  }
+}
