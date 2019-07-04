@@ -1,4 +1,5 @@
-const React = require('react')
+import React from 'react'
+import { registerPage } from '../../utils/registerPage.wx'
 
 class Test extends React.Component {
   constructor(props) {
@@ -8,26 +9,32 @@ class Test extends React.Component {
     }
   }
 
+  onShow() {
+    console.log('onShow')
+  }
+
   componentDidMount() {
-    console.log('did');
-    
+    console.log('did com');
+
     setTimeout(() => {
       this.setState({
-        name: 'xxx'
+        name: 'xhq'
       }, () => {
-        console.log('finish')
+        console.log('finish com')
       })
-    }, 2000)
+    }, 5000)
   }
 
   render() {
     var h = React.createElement;
+    const { name } = this.state;
     return h('view', {
-      class: 'test_class'
+      class: 'parent'
     }, h('text', {
       class: 'child'
-    }, 'text'));
+    }, name));
   }
 }
 
-module.exports = Test;
+Page(registerPage(Test, "pages/test/index"));
+

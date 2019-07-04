@@ -1,16 +1,26 @@
 const React = require('react')
+const _ = require('lodash')
 
-const Com = require('./componet');
+const App = require('./app');
 const Adapter = require('./render');
 
 const h = React.createElement;
 
-let container = {
-  type: 'page',
+const container = {
+  type: 'page_root',
   props: {},
   children: [],
   root: true,
-  appendChild: () => {},
+  appendChild(child) {
+    this.children.push(child);
+  },
+  removeChild(child) {
+    _.remove(this.children, (n) => {
+      return n === child;
+    });
+  },
 };
 
-const instance = Adapter.render(h(Com), container);
+// RootFiber
+const rootinstance = Adapter.render(h(App), container);
+

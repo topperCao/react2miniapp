@@ -1,65 +1,74 @@
 
 const ReactReconciler = require('react-reconciler');
-
-const rootHostContext = {};
-const childHostContext = {};
+const _ = require('lodash');
 
 const hostConfig = {
   now: Date.now,
-  getRootHostContext: () => {
-    return rootHostContext;
+  getRootHostContext: (nextRootInstance) => {
+    return nextRootInstance;
   },
   prepareForCommit: () => {
-    console.log('prepareForCommit');
+
   },
   resetAfterCommit: (containerInfo) => {
     console.log('resetAfterCommit', containerInfo);
   },
-  getChildHostContext: () => {
-    return childHostContext;
+  commitMount: (instance, type, props, finishedWork) => {
+    console.log(instance, type, props, finishedWork, 'commitMount');
+  },
+  getChildHostContext: (context, type, rootInstance) => {
+    return context;
   },
   shouldSetTextContent: (type, props) => {
-    return typeof props.children === 'string' || typeof props.children === 'number';
-  },
-  /**
-   This is where react-reconciler wants to create an instance of UI element in terms of the target. Since our target here is the DOM, we will create document.createElement and type is the argument that contains the type string like div or img or h1 etc. The initial values of domElement attributes can be set in this function from the newProps argument
-   */
-  createInstance: (type, newProps, rootContainerInstance, _currentHostContext, workInProgress) => {
-    console.log('createInstance')
-    return rootContainerInstance;
-  },
-  createTextInstance: (text) => {
-    // return document.createTextNode(text);
-  },
-  appendInitialChild: (parent, child) => {
-    // parent.appendChild(child);
-  },
-  appendChild(parent, child) {
-    // parent.appendChild(child);
-  },
-  finalizeInitialChildren: (domElement, type, props) => {},
-  supportsMutation: true,
-  appendChildToContainer: (parent, child) => {
-    // parent.appendChild(child);
-  },
-  prepareUpdate(domElement, oldProps, newProps) {
-    console.log('prepareUpdate')
     return true;
   },
-  commitUpdate(domElement, updatePayload, type, oldProps, newProps) {
-    console.log('commitUpdate');
-    // console.log(domElement, 'domElement');
-    // Object.keys(newProps).forEach((propName) => {
-    //   const propValue = newProps[propName];
-    //   if (propName === 'children') {
-    //     if (typeof propValue === 'string' || typeof propValue === 'number') {
-    //       domElement.textContent = propValue;
-    //     }
-    //   } else {
-    //     const propValue = newProps[propName];
-    //     domElement.setAttribute(propName, propValue);
-    //   }
-    // });
+  createInstance: (type, newProps, rootContainerInstance, _currentHostContext, workInProgress) => {
+    const instance = {
+      type,
+      props: newProps,
+      children: [],
+      root: false,
+      appendChild(child) {
+        this.children.push(child);
+      },
+      removeChild(child) {
+        _.remove(this.children, (n) => {
+          return n === child;
+        });
+      },
+    };
+    return instance;
+  },
+  createTextInstance: (text, rootContainerInstance, currentHostContext, workInProgress) => {
+    const instance = {
+      type: 'text',
+      props: {},
+      text,
+      root: false,
+    };
+    return instance;
+  },
+  appendInitialChild: (parent, child) => {
+    parent.appendChild(child);
+  },
+  appendChild(parent, child) {
+    parent.appendChild(child);
+  },
+  finalizeInitialChildren: (newInstance, type, newProps, rootContainerInstance, currentHostContext) => {
+    console.log('finalizeInitialChildren', newInstance);
+    return newInstance;
+  },
+  supportsMutation: true,
+  appendChildToContainer: (parent, child) => {
+    console.log(parent, child, 'appendChildToContainer');
+    parent.appendChild(child);
+  },
+  prepareUpdate(instance, type, oldProps, newProps, rootContainerInstance, currentHostContext) {
+    console.log('prepareUpdate', instance, oldProps, newProps);
+    return newProps;
+  },
+  commitUpdate(instance, updatePayload, type, oldProps, newProps, finishedWork) {
+    console.log(instance, 'commitUpdate');
   },
   commitTextUpdate(textInstance, oldText, newText) {
     textInstance.text = newText;
@@ -81,11 +90,10 @@ module.exports = {
       // TODO (bvaughn): If we decide to keep the wrapper component,
       // We could create a wrapper for containerTag as well to reduce special casing.
       root = ReactReconcilerInst.createContainer(containerTag, 0, false);
-      // console.log(root, 'root')
       roots.set(containerTag, root);
     }
     ReactReconcilerInst.updateContainer(element, root, null, callback);
     const rootInstance = ReactReconcilerInst.getPublicRootInstance(root);
-    return ReactReconcilerInst.getPublicRootInstance(root);
+    return rootInstance;
   },
 };

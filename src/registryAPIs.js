@@ -1,5 +1,5 @@
 import { onAndSyncApis, noPromiseApis, otherApis } from './wxAPI';
-import { noop } from './utils';
+import { noop } from './core/utils';
 
 export function promisefyApis(ReactWX, facade, more) {
     const weApis = Object.assign({}, onAndSyncApis, noPromiseApis, otherApis, more);

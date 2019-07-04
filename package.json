@@ -3,11 +3,21 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "rm -rf dist/ && rollup -c ./scripts/build.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.11",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-reconciler": "^0.20.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "rollup": "^1.16.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-cleanup": "^3.1.1"
   }
 }
