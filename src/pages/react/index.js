@@ -15,7 +15,6 @@ class Test extends React.Component {
 
   componentDidMount() {
     console.log('did com');
-
     setTimeout(() => {
       this.setState({
         name: 'xhq'
@@ -38,3 +37,4 @@ class Test extends React.Component {
 
 Page(registerPage(Test, "pages/test/index"));
 
+export default Test;

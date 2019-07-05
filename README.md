@@ -19,7 +19,7 @@ react转小程序核心思想：
   前置工作：
     1.将reactcomponet的render里的jsx转成小程序的静态template
     2.将react的class类转成createClass （便于生成小程序的config对象
-    3.react的componet 对标小程序里的组件，这里会借鉴nanachi的实现方式 使用template标签
+    3.react的componet 对标小程序里的组件，这里会借鉴nanachi的实现方式
 ```
 
 ## Author
