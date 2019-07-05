@@ -2,7 +2,7 @@
 import { createElement } from 'react';
 
 import { _getApp, updateMiniApp, callGlobalHook } from './utils';
-import Adapter from '../render/miniapp';
+import Adapter from '../Adapter/index';
 
 const noop = () => {};
 

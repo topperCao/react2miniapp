@@ -1,5 +1,4 @@
 
-
 <view class="parent">
   <text class="child">{{state.name}}</text>
 </view>

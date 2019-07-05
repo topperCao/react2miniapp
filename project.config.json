@@ -1,0 +1,10 @@
+{
+	"miniprogramRoot": "dist/",
+	"description": "项目配置文件。",
+	"setting": {},
+	"appid": "wxe74013f8e3c6e90f",
+	"projectname": "react2miniapp",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {}
+}

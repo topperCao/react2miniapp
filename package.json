@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist/ && rollup -c ./scripts/build.js"
+    "dev": "rm -rf ./dist && webpack --watch"
   },
   "author": "",
   "license": "ISC",
@@ -16,8 +16,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "replace-ext": "^1.0.0",
     "rollup": "^1.16.4",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-cleanup": "^3.1.1"
+    "rollup-plugin-cleanup": "^3.1.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   }
 }
