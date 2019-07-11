@@ -1,0 +1,31 @@
+
+<textarea
+  class="textarea"
+  bindinput="onInput"
+  placeholder="请输入多个数字，用空格隔开"
+  value="{{inputText}}"
+  type="number"
+/>
+<view >
+  <button bindtap="onSubmit">计算</button>
+  <button bindtap="onClear">清空</button>
+</view>
+
+<view>
+  平均值： {{average}}
+</view>
+<view>
+  标准偏差： {{result1}}
+</view>
+<view>
+  相对标准偏差： {{result11}}
+</view>
+<view>
+  平均偏差： {{result2}}
+</view>
+<view>
+  相对平均偏差： {{result22}}
+</view>
+
+
+<view bindtap="gotoreact" class="link">goto react</view>

@@ -79,22 +79,20 @@ const hostConfig = {
   },
 };
 
-const ReactReconcilerInst = ReactReconciler(hostConfig);
+export const ReactReconcilerInst = ReactReconciler(hostConfig);
 
 const roots = new Map();
 
-export default {
-  render(element, containerTag, callback) {
-    let root = roots.get(containerTag);
+export function render(element, containerTag, callback) {
+  let root = roots.get(containerTag);
 
-    if (!root) {
-      root = ReactReconcilerInst.createContainer(containerTag, 0, false);
-      roots.set(containerTag, root);
-    }
-    ReactReconcilerInst.updateContainer(element, root, null, callback);
-    const rootInstance = ReactReconcilerInst.getPublicRootInstance(root);
-    console.log('rootInstance', rootInstance);
-    containerTag.childInstance = rootInstance;
-    return rootInstance;
-  },
-};
+  if (!root) {
+    root = ReactReconcilerInst.createContainer(containerTag, 0, false);
+    roots.set(containerTag, root);
+  }
+  ReactReconcilerInst.updateContainer(element, root, null, callback);
+  const rootInstance = ReactReconcilerInst.getPublicRootInstance(root);
+  containerTag.childInstance = rootInstance;
+  containerTag.ReactReconcilerInst = ReactReconcilerInst;
+  return rootInstance;
+}

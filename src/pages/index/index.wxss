@@ -1,0 +1,13 @@
+
+.parent .textarea {
+  width: 100%;
+  height: 200rpx;
+  border: 2rpx solid #ccc;
+  padding: 5rpx;
+}
+.link {
+  margin-top: 40rpx;
+  text-align: center;
+  color: red;
+
+}

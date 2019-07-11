@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "rm -rf ./dist && webpack --watch"
+    "dev": "rm -rf ./dist && webpack --watch",
+    "build": "rm -rf ./dist && webpack"
   },
   "author": "",
   "license": "ISC",

@@ -1,9 +1,27 @@
 {
 	"miniprogramRoot": "dist/",
 	"description": "项目配置文件。",
-	"setting": {},
-	"appid": "wxe74013f8e3c6e90f",
-	"projectname": "react2miniapp",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"uglifyFileName": true
+	},
+	"appid": "wxfdf974e694597f4e",
+	"projectname": "智障二百五",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {}

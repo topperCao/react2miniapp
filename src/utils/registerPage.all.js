@@ -2,7 +2,7 @@
 import { createElement } from 'react';
 
 import { _getApp, updateMiniApp, callGlobalHook } from './utils';
-import Adapter from '../Adapter/index';
+import { render } from '../Adapter/index';
 
 const noop = () => {};
 
@@ -18,7 +18,7 @@ export function onLoad(PageClass, path, query) {
     root: true,
     appendChild: noop,
   };
-  const pageInstance = Adapter.render(// 生成页面的React对象
+  const pageInstance = render(// 生成页面的React对象
     createElement(PageClass, {
       path,
       query,

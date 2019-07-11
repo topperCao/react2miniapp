@@ -21,7 +21,7 @@ class Test extends React.Component {
       }, () => {
         console.log('finish com')
       })
-    }, 5000)
+    }, 3000)
   }
 
   render() {
