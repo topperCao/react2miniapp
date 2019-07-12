@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/laji/index",
+    "pages/index/index",
     "pages/react/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Test",
+    "navigationBarTitleText": "Nice",
     "navigationBarTextStyle": "black",
     "backgroundColor": "white"
   },

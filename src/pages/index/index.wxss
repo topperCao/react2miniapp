@@ -1,13 +1,49 @@
 
-.parent .textarea {
-  width: 100%;
+.textarea {
   height: 200rpx;
   border: 2rpx solid #ccc;
   padding: 5rpx;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  width: 100%;
 }
-.link {
-  margin-top: 40rpx;
-  text-align: center;
-  color: red;
 
+.btns {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btns .btn {
+  width: 40%;
+}
+
+.table  {
+  margin: 20rpx;
+  border: 1rpx solid pink;
+  border-radius: 20rpx;
+}
+
+.table .cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid pink;
+}
+
+.table .cell:last-child {
+  border-bottom: none;
+}
+
+.table  .cell .label {
+  width: 300rpx;
+  text-align: right;
+  border-right: 1rpx solid pink;
+  padding-right: 10rpx;
+}
+
+.table  .cell .value {
+  flex: 1;
+  padding-left: 10rpx;
 }

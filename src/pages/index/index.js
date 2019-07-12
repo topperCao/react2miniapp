@@ -56,14 +56,4 @@ Page({
       result22: (result22*100).toFixed(5) + '%',
     });
   },
-  gotoreact() {
-    wx.navigateTo({
-      url: '/pages/react/index',
-    })
-  },
-  gotolaji() {
-    wx.navigateTo({
-      url: '/pages/laji/index',
-    })
-  }
 });

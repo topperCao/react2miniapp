@@ -1,0 +1,66 @@
+.page_row{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+  padding: 20rpx;
+  border: 1rpx solid #d3a799;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+
+
+.search{
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search .input {
+  flex: 1;
+}
+
+.clearicon {
+  display: block;
+  margin: 0 20rpx;
+}
+
+.sousuo {
+  width: 15%;
+  text-align: center;
+  /* border: 1px solid #d3a799; */
+  border-radius: 10rpx;
+  color: sienna;
+  font-weight: 700;
+  font-size: 32rpx;
+}
+
+
+
+.result {
+  text-align: center;
+  color: #5c3a30;
+  font-size: 48rpx;
+  font-weight: bold;
+}
+
+.banner {
+  text-align: center;
+}
+
+.banner .img {
+  height: 200rpx;
+}
+
+
+.links {
+  position: absolute;
+  bottom: 40rpx;
+  width: 100%;
+}
+.links .link {
+  margin-bottom: 10rpx;
+  text-align: center;
+  color: sienna;
+}

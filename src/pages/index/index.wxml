@@ -6,28 +6,25 @@
   value="{{inputText}}"
   type="number"
 />
-<view >
-  <button bindtap="onSubmit">计算</button>
-  <button bindtap="onClear">清空</button>
+<view class="btns">
+  <button class="btn" bindtap="onClear">清空</button>
+  <button class="btn" bindtap="onSubmit" >计算</button>
 </view>
 
-<view>
-  平均值： {{average}}
+<view class="table">
+  <view class="cell">
+    <view class="label">平均值</view>  <view class="value">{{average}}</view>
+  </view>
+  <view class="cell">
+    <view class="label">标准偏差</view>  <view class="value">{{result1}}</view>
+  </view>
+  <view class="cell">
+    <view class="label">相对标准偏差</view>  <view class="value">{{result11}}</view>
+  </view>
+  <view class="cell">
+    <view class="label">平均偏差</view>  <view class="value">{{result2}}</view>
+  </view>
+  <view class="cell">
+    <view class="label">相对平均偏差</view>  <view class="value">{{result22}}</view>
+  </view>
 </view>
-<view>
-  标准偏差： {{result1}}
-</view>
-<view>
-  相对标准偏差： {{result11}}
-</view>
-<view>
-  平均偏差： {{result2}}
-</view>
-<view>
-  相对平均偏差： {{result22}}
-</view>
-
-
-<view bindtap="gotoreact" class="link">goto react</view>
-
-<view bindtap="gotolaji" class="link">垃圾分类查询</view>

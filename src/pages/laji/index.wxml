@@ -1,2 +1,26 @@
-<view>垃圾分类查询</view>
+
+<view class="banner">
+  <image class="img" src="../../assets/laji.jpeg"></image>
+</view>
+
+<view class='page_row'>
+  <view class="search">
+    <input class="input" placeholder="请输入关键字" value="{{searchName}}" bindinput="onInput" bindconfirm="onSearch" />
+    <icon wx:if="{{!!searchName}}" type="clear" class="clearicon" size="14" color="#ccc" bindtap="onClear"></icon>
+  </view>
+  <view class='sousuo' bindtap="onSearch">查询</view>
+</view>
+
+<view class="result">{{result}}</view>
+
+
+
+
+
+
+<view class="links">
+  <view bindtap="gotoindex" class="link">使用计算器</view>
+  <view bindtap="gotoreact" class="link">goto react</view>
+</view>
+
 

@@ -8,12 +8,13 @@
     ]
   ],
   "plugins": [
+    "@wepy/babel-plugin-import-regenerator",
     [
       "@babel/plugin-transform-runtime",
       {
         "absoluteRuntime": false,
         "corejs": false,
-        "helpers": true,
+        "helpers": false,
         "regenerator": true,
         "useESModules": false,
       }
