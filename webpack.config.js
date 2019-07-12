@@ -18,18 +18,6 @@ module.exports = {
       }
     ]
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        common: {
-          chunks: 'all',
-          minChunks: 2,
-          minSize: 0,
-          name: 'common',
-        },
-      },
-    },
-  },
   plugins: [
     new MainWebpackPlugin(),
     new CleanWebpackPlugin({

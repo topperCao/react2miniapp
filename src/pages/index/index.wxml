@@ -29,3 +29,5 @@
 
 
 <view bindtap="gotoreact" class="link">goto react</view>
+
+<view bindtap="gotolaji" class="link">垃圾分类查询</view>

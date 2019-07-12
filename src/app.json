@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/laji/index",
     "pages/react/index"
   ],
   "window": {

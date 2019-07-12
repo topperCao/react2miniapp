@@ -2,12 +2,12 @@
 	"miniprogramRoot": "dist/",
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
-		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"enhance": true,
 		"coverView": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
@@ -21,8 +21,34 @@
 		"uglifyFileName": true
 	},
 	"appid": "wxfdf974e694597f4e",
-	"projectname": "智障二百五",
+	"projectname": "%E6%99%BA%E9%9A%9C%E4%BA%8C%E7%99%BE%E4%BA%94",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"condition": {}
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "垃圾分类",
+					"pathName": "pages/laji/index"
+				}
+			]
+		}
+	}
 }

@@ -60,5 +60,10 @@ Page({
     wx.navigateTo({
       url: '/pages/react/index',
     })
+  },
+  gotolaji() {
+    wx.navigateTo({
+      url: '/pages/laji/index',
+    })
   }
 });
