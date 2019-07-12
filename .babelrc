@@ -8,7 +8,6 @@
     ]
   ],
   "plugins": [
-    "@wepy/babel-plugin-import-regenerator",
     [
       "@babel/plugin-transform-runtime",
       {
