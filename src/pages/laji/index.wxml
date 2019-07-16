@@ -19,6 +19,7 @@
 
 
 <view class="links">
+  <view bindtap="getLaji" class="link">laji</view>
   <view bindtap="gotoindex" class="link">使用计算器</view>
   <view bindtap="gotoreact" class="link">goto react</view>
 </view>

@@ -22,6 +22,15 @@ react转小程序核心思想：
     3.react的componet 对标小程序里的组件，这里会借鉴nanachi的实现方式
 ```
 
+## 工程上
+
+```
+1、使用webpack构建小程序项目
+2、支持wx.request Promise化
+3、引入generator-runtime支持async await
+```
+
+
 ## Author
 
 👤 **YufJ**

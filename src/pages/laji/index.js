@@ -6,6 +6,9 @@ Page({
     searchName: '',
     result: '',
   },
+  onLoad() {
+    wx.cloud.init();
+  },
   onClear() {
     this.setData({
       searchName: '',
@@ -39,6 +42,23 @@ Page({
   gotoindex() {
     wx.navigateTo({
       url: '/pages/index/index',
+    })
+  },
+  getLaji() {
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'laji',
+      // 传给云函数的参数
+      data: {
+        a: 1,
+        b: 2,
+      },
+      success: function(res) {
+        console.log(res, 'res') // 3
+      },
+      fail: function(error) {
+        console.log(error, 'err');
+      }
     })
   }
 })
