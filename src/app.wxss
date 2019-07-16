@@ -13,3 +13,27 @@ page{
   font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
   background-color: #fff;
 }
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1296913 */
+  src: url('//at.alicdn.com/t/font_1296913_nakdbnypedr.eot');
+  src: url('//at.alicdn.com/t/font_1296913_nakdbnypedr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.svg#iconfont') format('svg');
+}
+
+[class^="icon-"],[class*=" icon-"] {
+  font-family:"iconfont" !important;
+  font-size: 32rpx;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-camera:before {
+  content: "\e6ba";
+}

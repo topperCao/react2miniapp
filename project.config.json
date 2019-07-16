@@ -26,6 +26,7 @@
 	"simulatorPluginLibVersion": {},
 	"libVersion": "2.7.4",
 	"cloudfunctionRoot": "functions/",
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,

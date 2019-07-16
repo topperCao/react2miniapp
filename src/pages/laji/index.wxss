@@ -45,6 +45,19 @@
   font-weight: bold;
 }
 
+.result-image {
+  position: absolute;
+  bottom: 340rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #5c3a30;
+  font-size: 48rpx;
+  font-weight: bold;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
 .banner {
   text-align: center;
 }
@@ -58,9 +71,37 @@
   position: absolute;
   bottom: 40rpx;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 .links .link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 10rpx;
   text-align: center;
   color: sienna;
+  border: 1rpx solid sienna;
+  border-radius: 10rpx;
+  width: 250rpx;
+  height: 50rpx;
+}
+
+.camera {
+  position: absolute;
+  bottom: 140rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 400rpx;
+  height: 100rpx;
+  background: sienna;
+  margin: 0 auto;
+  border-radius: 50rpx;
+  color: #ffffff;
 }

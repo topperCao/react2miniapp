@@ -13,13 +13,15 @@
 
 <view class="result">{{result}}</view>
 
+<view class="result-image" wx:if="{{imgSrc}}">
+  <image mode="aspectFit" src="{{imgSrc}}" alt="xx" style="width: 100px; height: 100px;" />
+</view>
 
-
-
-
-
+<view class="camera" bindtap="takephoto">
+  <icon class="icon-camera"></icon>
+  <text >拍照识别</text>
+</view>
 <view class="links">
-  <view bindtap="getLaji" class="link">laji</view>
   <view bindtap="gotoindex" class="link">使用计算器</view>
   <view bindtap="gotoreact" class="link">goto react</view>
 </view>
