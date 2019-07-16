@@ -1,5 +1,6 @@
 
-import getLaji from '../../api/laji'
+// import getLaji from '../../api/laji'
+
 
 Page({
   data: {
@@ -23,12 +24,15 @@ Page({
     });
   },
   async onSearch() {
+    this.setData({
+        result: '正在查询...',
+      })
     const { searchName } = this.data;
     try {
-      const data = await getLaji(searchName)
-      console.log(data, 'data')
+      const { type } = await this.getLaji(searchName)
+      console.log(type, 'type')
       this.setData({
-        result: data,
+        result: type,
       })
     } catch (error) {
       console.log(error, 'error');
@@ -44,21 +48,24 @@ Page({
       url: '/pages/index/index',
     })
   },
-  getLaji() {
-    wx.cloud.callFunction({
-      // 云函数名称
-      name: 'laji',
-      // 传给云函数的参数
-      data: {
-        a: 1,
-        b: 2,
-      },
-      success: function(res) {
-        console.log(res, 'res') // 3
-      },
-      fail: function(error) {
-        console.log(error, 'err');
-      }
+  getLaji(name) {
+    return new Promise((resolve, reject) => {
+      wx.cloud.callFunction({
+        // 云函数名称
+        name: 'laji',
+        // 传给云函数的参数
+        data: {
+          name: name,
+        },
+        success: function(res) {
+          console.log(res, 'res') // 3
+          resolve(res.result)
+        },
+        fail: function(error) {
+          console.log(error, 'err');
+          reject(error)
+        }
+      })
     })
   }
 })
