@@ -1,7 +1,4 @@
 
-// import getLaji from '../../api/laji'
-
-
 Page({
   data: {
     searchName: '',

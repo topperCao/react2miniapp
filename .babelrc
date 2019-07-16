@@ -12,7 +12,7 @@
       "@babel/plugin-transform-runtime",
       {
         "absoluteRuntime": false,
-        "corejs": false,
+        "corejs": 2,
         "helpers": false,
         "regenerator": true,
         "useESModules": false,
