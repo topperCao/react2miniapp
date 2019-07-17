@@ -34,7 +34,7 @@ react转小程序核心思想：
 
 查询垃圾分类（输入+拍照识别
 
-<img src="./screenshot/WechatIMG4.jpeg" style="width: 200px" />
+<img src="./screenshot/WechatIMG4.jpeg" width="100" />
 
 
 ## Author
