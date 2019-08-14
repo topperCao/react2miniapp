@@ -44,12 +44,27 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "垃圾分类",
-					"pathName": "pages/laji/index"
+					"pathName": "pages/laji/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "date",
+					"pathName": "pages/date/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

@@ -23,7 +23,8 @@
 </view>
 <view class="links">
   <view bindtap="gotoindex" class="link">使用计算器</view>
-  <view bindtap="gotoreact" class="link">goto react</view>
+  <!-- <view bindtap="gotoreact" class="link">goto react</view> -->
+  <view bindtap="gotodate" class="link">查看纪念日</view>
 </view>
 
 

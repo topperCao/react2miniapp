@@ -2,7 +2,10 @@
   "pages": [
     "pages/laji/index",
     "pages/index/index",
+    "pages/date/index",
+    "pages/login/index",
     "pages/react/index"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

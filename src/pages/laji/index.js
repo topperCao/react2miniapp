@@ -44,6 +44,18 @@ Page({
       url: '/pages/react/index',
     })
   },
+  gotodate() {
+    const bool = wx.getStorageSync('isDateLogin')
+    if (bool) {
+      wx.navigateTo({
+        url: '/pages/date/index',
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/login/index',
+      })
+    }
+  },
   gotoindex() {
     wx.navigateTo({
       url: '/pages/index/index',

@@ -1,0 +1,10 @@
+
+<view class="container">
+  <view wx:for="{{dates}}">
+    {{item.name}}: {{item.date}}
+  </view>
+</view>
+
+<button class="btn" type="primary" bindtap="onAdd">
+  添加日期
+</button>

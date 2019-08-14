@@ -9,8 +9,8 @@ class Test extends React.Component {
     }
   }
 
-  onShow() {
-    console.log('onShow')
+  onLoad() {
+    wx.cloud.init();
   }
 
   componentDidMount() {
