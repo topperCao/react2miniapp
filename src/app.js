@@ -1,9 +1,12 @@
 // import './utils/es6-promise';
+import createStore from './redux/store';
+
+const store = createStore();
 
 //app.js
 App({
   globalData: {
-
+    store,
   },
   onLaunch: function(options) {
     this.getSettings();

@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/date/index",
     "pages/login/index",
+    "pages/edit/index",
     "pages/react/index"
 
   ],

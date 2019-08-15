@@ -44,7 +44,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -64,6 +64,12 @@
 					"name": "login",
 					"pathName": "pages/login/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "edit",
+					"pathName": "pages/edit/index",
 					"scene": null
 				}
 			]

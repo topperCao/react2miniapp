@@ -46,7 +46,7 @@ Page({
             const { data } = res;
             if (data.password === password) {
               wx.setStorageSync('isDateLogin', true);
-              wx.navigateBack()
+              wx.navigateBack();
             } else {
               wx.showToast({
                 title: '用户名和密码不一致',

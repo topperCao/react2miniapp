@@ -1,0 +1,60 @@
+
+page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+.container {
+  flex: 1;
+  overflow: scroll;
+  width: 100%;
+}
+
+.title {
+  border-bottom: 1rpx solid palevioletred;
+  text-align: center;
+  width: 60%;
+  margin: 20rpx auto;
+  color: pink;
+}
+
+.date {
+  color:palevioletred;
+  width: 300rpx;
+  float: right;
+  text-align: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.textarea {
+  padding: 10rpx;
+  border: 1rpx solid grey;
+  width: 90%;
+  height: 600rpx;
+  margin: 40rpx auto;
+  border-radius: 20rpx;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+
+.btns .btn {
+  margin: 20rpx auto;
+  background-color: pink;
+  color: white;
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,39 @@
+
+<view class="container">
+  <view class="title">
+    <view class="value">
+      <input
+        name="input"
+        value="{{modalObj.currentObj.name}}"
+        data-key="name"
+        placeholder="请输入标题"
+        bindchange="bindChange"
+        placeholder-style="color:pink;"
+        disabled="{{modalObj.type === 'read'}}"
+      />
+    </view>
+  </view>
+  <view class="date">
+    <view class="value">
+      <picker mode="date" value="{{modalObj.currentObj.date}}" data-key="date" bindchange="bindChange" disabled="{{modalObj.type === 'read'}}">
+        <view class="picker">
+          {{modalObj.currentObj.date || '请选择日期'}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="clear"></view>
+  <view class="textarea">
+    <textarea disabled="{{modalObj.type === 'read'}}" placeholder="请输入想要记录的事情..." data-key="text" bindinput="bindChange" value="{{modalObj.currentObj.text || ''}}" />
+  </view>
+</view>
+
+<view class="btns" wx:if="{{modalObj.type !== 'read'}}">
+  <view class="cancel btn" bindtap="onTapCancel">
+    取消
+  </view>
+  <view class="submit btn" bindtap="onTapConfirm">
+    提交
+  </view>
+</view>
+

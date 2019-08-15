@@ -1,10 +1,46 @@
 
 <view class="container">
-  <view wx:for="{{dates}}">
-    {{item.name}}: {{item.date}}
+  <view wx:for="{{dates}}" class="list-item">
+    <view class="name" data-obj="{{item}}" bindtap="onTapRead">{{item.name}}</view>
+    <view class="date">{{item.date}}</view>
+    <view class="handle">
+      <text class="edit" data-obj="{{item}}" bindtap="onTapEdit">编辑</text>
+      <text class="delete" data-obj="{{item}}" bindtap="onTapDelete">删除</text>
+    </view>
+
   </view>
 </view>
 
-<button class="btn" type="primary" bindtap="onAdd">
-  添加日期
-</button>
+<view class="addbtn" bindtap="onTapAdd">
+  添加事件
+</view>
+
+<view class="modal" wx:if="{{modalObj.visiable}}">
+  <view class="header">
+    <view class="left" bindtap="onTapCancel">取消</view>
+    <view class="mid">{{modalObj.type === 'add' ? '添加' : '编辑'}}</view>
+    <view class="right" bindtap="onTapConfirm">确定</view>
+  </view>
+  <view class="form">
+    <view class="form-item">
+      <view class="label">标题</view>
+      <view class="value">
+        <input name="input" value="{{modalObj.currentObj.name}}" data-key="name"  placeholder="输入标题" bindchange="bindChange" />
+      </view>
+    </view>
+    <view class="form-item">
+      <view class="label">日期</view>
+      <view class="value">
+        <picker mode="date" value="{{modalObj.currentObj.date}}" data-key="date" bindchange="bindChange">
+          <view class="picker">
+            {{modalObj.currentObj.date || '暂无日期'}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="refresh" bindtap="getDates">
+   <icon class="icon-refresh"></icon>
+</view>

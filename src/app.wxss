@@ -16,12 +16,12 @@ page{
 
 @font-face {
   font-family: 'iconfont';  /* project id 1296913 */
-  src: url('//at.alicdn.com/t/font_1296913_nakdbnypedr.eot');
-  src: url('//at.alicdn.com/t/font_1296913_nakdbnypedr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1296913_nakdbnypedr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1296913_0alsba5jqxnt.eot');
+  src: url('//at.alicdn.com/t/font_1296913_0alsba5jqxnt.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1296913_0alsba5jqxnt.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1296913_0alsba5jqxnt.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1296913_0alsba5jqxnt.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1296913_0alsba5jqxnt.svg#iconfont') format('svg');
 }
 
 [class^="icon-"],[class*=" icon-"] {
@@ -36,4 +36,7 @@ page{
 
 .icon-camera:before {
   content: "\e6ba";
+}
+.icon-refresh:before {
+  content: "\e600";
 }
