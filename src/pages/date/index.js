@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import _sortBy from 'lodash/sortBy'
 
 const app = getApp();
 const { store } = app.globalData;
@@ -90,7 +91,7 @@ Page({
     try {
       const res = await db.collection('jinian').get();
       _this.setData({
-        dates: res.data
+        dates: _sortBy(res.data, (o) => o.date)
       })
     } catch (error) {
       console.log(error, 'error')
