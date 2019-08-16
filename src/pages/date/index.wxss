@@ -25,7 +25,7 @@ page {
   flex: 2;
 }
 .list-item .date {
-  color: gold;
+  color: orange;
   flex: 2;
 }
 .list-item .handle {
@@ -44,7 +44,7 @@ page {
 
 
 .addbtn {
-  margin: 20rpx auto;
+  margin: 20rpx auto 40rpx;
   background-color: pink;
   color: white;
   width: 200rpx;

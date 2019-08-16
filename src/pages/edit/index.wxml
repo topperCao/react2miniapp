@@ -1,6 +1,6 @@
 
 <view class="container">
-  <view class="title">
+  <view class="title {{modalObj.type === 'read' ? 'noborder' : ''}}">
     <view class="value">
       <input
         name="input"
@@ -8,14 +8,19 @@
         data-key="name"
         placeholder="请输入标题"
         bindchange="bindChange"
-        placeholder-style="color:pink;"
         disabled="{{modalObj.type === 'read'}}"
       />
     </view>
   </view>
   <view class="date">
     <view class="value">
-      <picker mode="date" value="{{modalObj.currentObj.date}}" data-key="date" bindchange="bindChange" disabled="{{modalObj.type === 'read'}}">
+      <picker
+        mode="date"
+        value="{{modalObj.currentObj.date}}"
+        data-key="date"
+        bindchange="bindChange"
+        disabled="{{modalObj.type === 'read'}}"
+      >
         <view class="picker">
           {{modalObj.currentObj.date || '请选择日期'}}
         </view>
@@ -23,8 +28,14 @@
     </view>
   </view>
   <view class="clear"></view>
-  <view class="textarea">
-    <textarea disabled="{{modalObj.type === 'read'}}" placeholder="请输入想要记录的事情..." data-key="text" bindinput="bindChange" value="{{modalObj.currentObj.text || ''}}" />
+  <view class="textarea {{modalObj.type === 'read' ? 'noborder' : ''}}">
+    <textarea
+      disabled="{{modalObj.type === 'read'}}"
+      placeholder="请输入想要记录的事情..."
+      data-key="text"
+      bindinput="bindChange"
+      value="{{modalObj.currentObj.text || ''}}"
+    />
   </view>
 </view>
 
