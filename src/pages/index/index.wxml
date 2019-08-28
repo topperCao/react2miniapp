@@ -1,4 +1,10 @@
 
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{tags}}">
+    <radio value="{{item.value}}" checked="{{item.value === currentTag}}"/>{{item.name}}
+  </label>
+</radio-group>
+
 <textarea
   class="textarea"
   bindinput="onInput"
@@ -26,5 +32,8 @@
   </view>
   <view class="cell">
     <view class="label">相对平均偏差</view>  <view class="value">{{result22}}</view>
+  </view>
+  <view class="cell">
+    <view class="label">水分值</view>  <view class="value">{{resultshuifen}}</view>
   </view>
 </view>
