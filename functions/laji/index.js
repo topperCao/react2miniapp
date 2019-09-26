@@ -33,7 +33,7 @@ async function getLaji(name) {
   })
 
   let type = '';
-  $('.container .row').eq(2).find('.col-md-12 h1 span').each((index, element) => {
+  $('.container .row').eq(3).find('.col-xs-12 h1 span').each((index, element) => {
     const reg = /(&nbsp;)/ig
     const xx = $(element).text().replace(reg, '')
     type += xx;
