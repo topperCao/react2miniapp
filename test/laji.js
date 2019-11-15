@@ -1,9 +1,7 @@
-// 云函数入口文件
-const cloud = require('wx-server-sdk')
+
 const cheerio = require('cheerio')
 const axios = require('axios')
 
-cloud.init()
 
 function request({ url, params, method, isSpider = false }) {
   return axios({
@@ -42,10 +40,9 @@ async function getLaji(name) {
   return type || `未找到${name}对应分类`;
 }
 
-exports.main = async (event, context) => {
-  const { name } = event;
-  const type = await getLaji(name)
-  return {
-    type: type,
-  }
+async function main() {
+  const type = await getLaji('西瓜')
+  console.log(type, 'type');
 }
+
+main()
