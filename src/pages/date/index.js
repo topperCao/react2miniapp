@@ -89,10 +89,32 @@ Page({
       title: '加载中...',
     });
     try {
-      const res = await db.collection('jinian').get();
+      const MAX_LIMIT = 20
+      // 先取出集合记录总数
+      const countResult = await db.collection('jinian').count()
+      const total = countResult.total
+      // 计算需分几次取
+      const batchTimes = Math.ceil(total / MAX_LIMIT)
+      // 承载所有读操作的 promise 的数组
+      const tasks = []
+      for (let i = 0; i < batchTimes; i++) {
+        const promise = db.collection('jinian').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
+        tasks.push(promise)
+      }
+
+      let res = await Promise.all(tasks)
+
+      res = res.reduce((acc, cur) => {
+        return {
+          data: acc.data.concat(cur.data),
+          errMsg: acc.errMsg,
+        }
+      })
+
       _this.setData({
         dates: _sortBy(res.data, (o) => o.date)
       })
+
     } catch (error) {
       console.log(error, 'error')
     } finally {
